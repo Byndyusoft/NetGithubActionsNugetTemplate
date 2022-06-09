@@ -1,0 +1,23 @@
+<Project>
+	<PropertyGroup>
+		
+		<TargetFramework>net5.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		
+		<AssemblyName>Byndyusoft.$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>Byndyusoft.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+		
+		<VersionPrefix>0.0.1</VersionPrefix>
+		<VersionSuffix>$(VersionSuffix)</VersionSuffix>
+		<Authors>Byndyusoft</Authors>
+		
+		<PackageTags>Byndyusoft;NugetPackageExample</PackageTags>
+		
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		
+		<RepositoryUrl>TODO_ADD_LINK</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		
+	</PropertyGroup>
+</Project>
