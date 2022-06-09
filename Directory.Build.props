@@ -16,7 +16,7 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		
-		<RepositoryUrl>TODO_ADD_LINK</RepositoryUrl>
+		<RepositoryUrl>https://github.com/Byndyusoft/NetGithubActionsNugetTemplate</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		
 	</PropertyGroup>

@@ -5,7 +5,7 @@ This is a template repository with example github actions for .NET nuget package
 
 # How to use (WIP): 
  - Remove example solution (ExampleSolution.sln, src and tests folders)
- - Change properties in Directory.Build.props file according to your needs
+ - Change properties in Directory.Build.props file according to your needs (version, package tags, repository url)
  - fix **dotnet-version** in .github/workflows/\*.yml
  - fix **dotnet pack** steps in .github/workflows/release.yml
 
