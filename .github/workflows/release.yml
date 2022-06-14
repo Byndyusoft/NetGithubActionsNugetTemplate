@@ -32,8 +32,8 @@ jobs:
       - name: Test
         run: dotnet test --configuration Release --no-build
         
-      - name: Create package (ExampleProject)
-        run: dotnet pack --configuration Release src/ExampleProject/ExampleProject.csproj
+      - name: Create package(s)
+        run: dotnet pack --configuration Release --no-build
         
       - name: Publish packages
         run: dotnet nuget push **/*.nupkg -k $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
