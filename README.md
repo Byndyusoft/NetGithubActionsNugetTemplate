@@ -5,7 +5,7 @@ This is a template repository with example github actions for .NET nuget package
 
 # How to use:
  - Remove example solution (ExampleSolution.sln, src and tests folders)
- - add icon reference to packaged projects (example: [src/ExampleProject/ExampleProject.csproj]ExampleProject.csproj)
+ - add icon reference to packaged projects ([example](src/ExampleProject/ExampleProject.csproj))
  - Change properties in Directory.Build.props file according to your needs (version, package tags, repository url)
  - fix **dotnet-version** in .github/workflows/\*.yml
 
