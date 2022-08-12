@@ -37,8 +37,8 @@ jobs:
       - name: Get suffix name
         id: suffix_name
         run: |
-          echo $steps.branch-name.outputs.current_branch
-          SUFFIX_NAME="${steps.branch-name.outputs.current_branch//\//-}"
+          echo ${{ steps.branch-name.outputs.current_branch }}
+          SUFFIX_NAME="${${{ steps.branch-name.outputs.current_branch }}//\//-}"
           echo $SUFFIX_NAME
         
       - name: Create package(s)
