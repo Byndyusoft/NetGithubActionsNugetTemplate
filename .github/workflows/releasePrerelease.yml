@@ -32,7 +32,7 @@ jobs:
         run: dotnet test --configuration Release --no-build
         
       - name: Create package(s)
-        run: dotnet pack --configuration Release --no-build
+        run: dotnet pack --version-suffix ${{github.ref_name}} --configuration Release --no-build
         
       - name: Publish packages
-        run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} --version-suffix ${{github.ref_name}} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
