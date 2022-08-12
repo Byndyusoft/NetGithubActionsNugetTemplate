@@ -35,4 +35,4 @@ jobs:
         run: dotnet pack --configuration Release --no-build
         
       - name: Publish packages
-        run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} --version-suffix ${{GITHUB_REF_NAME}} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} --version-suffix ${{github.ref_name}} --source https://api.nuget.org/v3/index.json
