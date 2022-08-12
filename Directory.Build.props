@@ -1,8 +1,9 @@
 <Project>
 	<PropertyGroup>
 		
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>netstandard2.0</TargetFramework>
 		<Nullable>enable</Nullable>
+		<LangVersion>9</LangVersion>		
 		
 		<AssemblyName>Byndyusoft.$(MSBuildProjectName)</AssemblyName>
 		<RootNamespace>Byndyusoft.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
@@ -18,5 +19,17 @@
 		<RepositoryUrl>https://github.com/Byndyusoft/NetGithubActionsNugetTemplate</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		
+		<PackageIcon>icon.png</PackageIcon>
+		
+		<IsPackable>false</IsPackable>
+		
 	</PropertyGroup>
+	
+	
+	<ItemGroup>
+		<None Include="..\..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 </Project>
