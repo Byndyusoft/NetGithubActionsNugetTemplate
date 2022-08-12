@@ -3,7 +3,7 @@ name: Publish
 on:
   release:  
     type: [published]
-    branches:
+    branches-ignore:
       - master
 
 jobs:
@@ -36,9 +36,10 @@ jobs:
         id: branch-name
         uses: tj-actions/branch-names@v5.4
         
-      - name: Set Up DB Name
+      - name: Get suffix name
         id: suffix_name
         run: |
+          echo $steps.branch-name.outputs.current_branch
           SUFFIX_NAME="${steps.branch-name.outputs.current_branch//\//-}"
           echo $SUFFIX_NAME
         
