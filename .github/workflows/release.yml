@@ -12,7 +12,6 @@ jobs:
     env:
       DOTNET_NOLOGO: true
       DOTNET_CLI_TELEMETRY_OPTOUT: true
-      NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
       
     steps:
       - name: Checkout
@@ -36,4 +35,4 @@ jobs:
         run: dotnet pack --configuration Release --no-build
         
       - name: Publish packages
-        run: dotnet nuget push **/*.nupkg -k $NUGET_AUTH_TOKEN --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
