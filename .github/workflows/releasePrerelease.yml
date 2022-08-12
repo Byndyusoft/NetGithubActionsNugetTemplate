@@ -29,20 +29,9 @@ jobs:
 
       - name: Test
         run: dotnet test --configuration Release --no-build
-
-      - name: Get branch name
-        id: branch-name
-        uses: tj-actions/branch-names@v5.4
-        
-      - name: Get suffix name
-        id: suffix_name
-        run: |
-          CURRENT_BRANCH="${{ steps.branch-name.outputs.current_branch }}"
-          SUFFIX_NAME="${CURRENT_BRANCH//\//-}"
-          echo $SUFFIX_NAME
         
       - name: Create package(s)
-        run: dotnet pack --version-suffix ${{steps.suffix_name.outputs}} --configuration Release --no-build
+        run: dotnet pack --version-suffix ${{format('tags-{0}', github.ref_name}} --configuration Release --no-build
         
       - name: Publish packages
         run: dotnet nuget push **/*.nupkg -k ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
