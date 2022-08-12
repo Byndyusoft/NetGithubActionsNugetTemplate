@@ -1,8 +1,10 @@
 name: Publish
 
 on:
-  release:
-    branches-ignore: [master]
+  release:  
+    type: [published]
+    branches:
+      - master
 
 jobs:
   publish:
