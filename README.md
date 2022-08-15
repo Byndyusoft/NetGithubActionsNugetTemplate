@@ -9,15 +9,13 @@ This is a template repository with example github actions for .NET nuget package
  - Change properties in Directory.Build.props file according to your needs (version, package tags, repository url)
  - fix **dotnet-version** in .github/workflows/\*.yml
 
-# How to publish to nuget.org:
+# How to publish pre-release to nuget.org:
 
-## Release
+Mark *This is a pre-release* checkbox when you create a release. 
 
-In create release card do not mark Pre-release option. The version of published package will be retrieved from .csproj or Directory.Build.props file.
+![image](https://user-images.githubusercontent.com/38452272/184600138-abc74f6e-3c7e-4c0a-ad51-426473f02917.png)
 
-## Pre-release
-
-In create release card mark Pre-release option. The version will be *<proj_version>-tags-<tag_name>*.
+The package version will be *<proj_version>-tags-<tag_name>* where *proj_version* is retrieved from .csproj or Directory.Build.props file.
 
 # Maintainers
 [github.maintain@byndyusoft.com](mailto:github.maintain@byndyusoft.com)
