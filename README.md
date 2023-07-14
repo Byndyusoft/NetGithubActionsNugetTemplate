@@ -5,8 +5,9 @@ This is a template repository with example github actions for .NET nuget package
 
 ## How to use:
 - Rename ExampleSolution into your solution name (ExampleSolution => MyPackageSolution)
+- Delete and add your Projects or rename existed
 - Change properties in Directory.Build.props file according to your needs (version, package tags, repository url)
-- fix **dotnet-version** in .github/workflows/\*.yml
+- Fix **dotnet-version** in .github/workflows/\*.yml
 
 ## How to publish pre-release to nuget.org:
 
@@ -16,15 +17,23 @@ Mark *This is a pre-release* checkbox when you create a release.
 
 The package version will be *<proj_version>-tags-<tag_name>* where *proj_version* is retrieved from .csproj or Directory.Build.props file.
 
+## Publishing README on Nuget 
+If you want to publish README on Nuget add this in package csproj file
+``` xml
+<ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+</ItemGroup>
+```
+
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-# PackageName [![Nuget](https://img.shields.io/nuget/v/PackageName.svg)](https://www.nuget.org/packages/PackageName/)[![Downloads](https://img.shields.io/nuget/dt/PackageName.svg)](https://www.nuget.org/packages/PackageName/)
+# ExampleProject [![Nuget](https://img.shields.io/nuget/v/ExampleProject.svg)](https://www.nuget.org/packages/ExampleProject/)[![Downloads](https://img.shields.io/nuget/dt/ExampleProject.svg)](https://www.nuget.org/packages/ExampleProject/)
 
 Package description
 
 ## Installing
 
 ```shell
-dotnet add package PackageName
+dotnet add package ExampleProject
 ```
 
 ## Usage
@@ -35,14 +44,14 @@ Usage description
   TODO
 ```
 
-# SecondPackageName [![Nuget](https://img.shields.io/nuget/v/SecondPackageName.svg)](https://www.nuget.org/packages/SecondPackageName/)[![Downloads](https://img.shields.io/nuget/dt/SecondPackageName.svg)](https://www.nuget.org/packages/SecondPackageName/)
+# ExampleProject.SecondPackage [![Nuget](https://img.shields.io/nuget/v/ExampleProject.SecondPackage.svg)](https://www.nuget.org/packages/ExampleProject.SecondPackage/)[![Downloads](https://img.shields.io/nuget/dt/ExampleProject.SecondPackage.svg)](https://www.nuget.org/packages/ExampleProject.SecondPackage/)
 
 Package description
 
 ## Installing
 
 ```shell
-dotnet add package SecondPackageName
+dotnet add package ExampleProject.SecondPackage
 ```
 
 ## Usage
