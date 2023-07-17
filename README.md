@@ -1,11 +1,11 @@
 # Template Information (Delete this header before publishing package)
 
 ## .NET Nuget publishing template
-This is a template repository with example github actions for .NET nuget packages creation and publishing
+This is a template repository with github actions for .NET nuget packages creation and publishing
 
 ## How to use:
 - Rename ExampleSolution to your solution name (ExampleSolution => MyPackageSolution)
-- Delete project and add your projects or rename existed projects (ExampleProject => MyPackage)
+- Delete project and add your projects or rename existing projects (ExampleProject => MyPackage)
 - Change properties in Directory.Build.props file according to your needs (version, package tags, repository url)
 - Fix **dotnet-version** in .github/workflows/\*.yml
 
