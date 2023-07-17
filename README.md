@@ -5,7 +5,7 @@ This is a template repository with github actions for .NET nuget packages creati
 
 ## How to use:
 - Rename ExampleSolution to your solution name (ExampleSolution => MyPackageSolution)
-- Delete project and add your projects or rename existing projects (ExampleProject => MyPackage)
+- Delete project and add your projects or rename existing projects(ExampleProject => MyPackage). If your IDE does not support folders renaming, you also need to rename folders manually. 
 - Change properties in Directory.Build.props file according to your needs (version, package tags, repository url)
 - Fix **dotnet-version** in .github/workflows/\*.yml
 
